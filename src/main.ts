@@ -1,4 +1,5 @@
 import './assets/main.css'
+import './firebase/firebaseConfig'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
