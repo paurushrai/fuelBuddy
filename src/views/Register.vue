@@ -100,7 +100,6 @@ const signInWithGoogle = () => {
         </div>
 
         <Button text="SignUp" />
-
         <Button @onClick="signInWithGoogle" text="Sign In With Google" />
 
         <div>
