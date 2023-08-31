@@ -4,39 +4,39 @@ import Home from "../views/Home.vue";
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: () => import('../views/Dashboard.vue'),
-      meta: {
-        authRequired: true,
-      }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/Login.vue'),
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: () => import('../views/Register.vue'),
-    },
-    {
-      path: '/profile',
-      name: 'profile',
-      component: () => import('../views/Profile.vue'),
-      meta: {
-        authRequired: true,
-      }
-    }
-  ]
+  // routes: [
+  //   {
+  //     path: '/',
+  //     name: 'home',
+  //     component: Home
+  //   },
+  //   {
+  //     path: '/dashboard',
+  //     name: 'dashboard',
+  //     component: () => import('../views/Dashboard.vue'),
+  //     meta: {
+  //       authRequired: true,
+  //     }
+  //   },
+  //   {
+  //     path: '/login',
+  //     name: 'login',
+  //     component: () => import('../views/Login.vue'),
+  //   },
+  //   {
+  //     path: '/register',
+  //     name: 'register',
+  //     component: () => import('../views/Register.vue'),
+  //   },
+  //   {
+  //     path: '/profile',
+  //     name: 'profile',
+  //     component: () => import('../views/Profile.vue'),
+  //     meta: {
+  //       authRequired: true,
+  //     }
+  //   }
+  // ]
 })
 
 const getCurrentUser = () => {
