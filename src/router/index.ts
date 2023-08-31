@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router/auto'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Home from "../views/Home.vue";
 
