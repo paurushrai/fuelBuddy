@@ -8,7 +8,7 @@ import Hero from '@/components/Hero.vue';
     <Hero headline="Doorstep Fuel Delivery Service" 
   subHeading="India's Largest Doorstep Diesel Delivery Service"
   buttonText="Download App" />
-    <h1>Home</h1>
+    <!-- <h1>Home</h1> -->
   </div>
 </template>
 

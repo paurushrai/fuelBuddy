@@ -1,13 +1,30 @@
 import { defineStore } from 'pinia';
+import { getAuth } from 'firebase/auth';
 
 interface AuthState {
   user: any | null;
   isLoggedIn: boolean;
 }
 
+let user: any;
+
+// const auth = getAuth();
+//  user = auth.currentUser;
+
+// if (user !== null) {
+//   user.providerData.forEach((profile) => {
+    
+//     console.log("Sign-in provider: " + profile.providerId);
+//     console.log("  Provider-specific UID: " + profile.uid);
+//     console.log("  Name: " + profile.displayName);
+//     console.log("  Email: " + profile.email);
+//     console.log("  Photo URL: " + profile.photoURL);
+//   });
+// }
+
 export const useAuthStore = defineStore('auth', {
   state: (): AuthState => ({
-    user: null,
+    user,
     isLoggedIn: false,
   }),
   actions: {
@@ -18,14 +35,6 @@ export const useAuthStore = defineStore('auth', {
     clearUser() {
       this.user = null;
       this.isLoggedIn = false;
-    },
-    // async logout() {
-    //   try {
-    //     await auth.signOut(); // You need to import and use the `auth` object from your code
-    //     this.clearUser();
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // },
+    }
   },
 });

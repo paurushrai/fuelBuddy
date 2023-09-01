@@ -1,15 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Home from "../views/Home.vue";
+// import Home from "../views/Home.vue";
+import routes from '~pages';
+
 
 const router = createRouter({
   history: createWebHistory(),
+  // routes,
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
     {
       path: '/dashboard',
       name: 'dashboard',
@@ -17,16 +15,6 @@ const router = createRouter({
       meta: {
         authRequired: true,
       }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: () => import('../views/Login.vue'),
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: () => import('../views/Register.vue'),
     },
     {
       path: '/profile',
@@ -55,9 +43,9 @@ router.beforeEach( async (to, from, next) => {
       next();
     } else {
       alert('You must be logged in to see this page');
-      next({
-        path: '/',
-      });
+      // next({
+      //   path: '/home',
+      // });
     }
   } else {
     next();
